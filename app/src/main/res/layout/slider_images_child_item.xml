@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.bjmasc.ecommerce.home.SliderImagesChildItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_16"
+        app:cardCornerRadius="@dimen/dp_8"
+        app:cardElevation="@dimen/dp_8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.bjmasc.sharedcode.widgets.CustomImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImage='@{vm.sliderImage.image}' />
+
+            <com.bjmasc.sharedcode.widgets.CustomTextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_6"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="@{vm.sliderImage.title}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:text_font="Quicksand_Bold" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

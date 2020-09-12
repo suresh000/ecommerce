@@ -13,6 +13,7 @@ import com.bjmasc.ecommerce.apiclient.ApiError;
 import com.bjmasc.ecommerce.apiclient.RetrofitClient;
 import com.bjmasc.ecommerce.apiclient.home.HomeApi;
 import com.bjmasc.ecommerce.base.BaseViewModel;
+import com.bjmasc.ecommerce.empty.EmptyItemViewModel;
 import com.bjmasc.ecommerce.model.home.HomeResponse;
 
 import java.util.ArrayList;
@@ -49,7 +50,9 @@ public class HomeViewModel extends BaseViewModel {
 
                 viewModels.add(new BannerItemViewModel(mActivity, response.getBanners()));
                 viewModels.add(new JustArrivedItemViewModel(mActivity, response.getJust_arrived()));
+                viewModels.add(new SliderImagesItemViewModel(mActivity, response.getSlider_images()));
                 viewModels.add(new MostPopViewItemViewModel(mActivity, response.getMost_popular_viewed()));
+                viewModels.add(new EmptyItemViewModel());
 
                 adapter.addViewModels(viewModels);
             }
