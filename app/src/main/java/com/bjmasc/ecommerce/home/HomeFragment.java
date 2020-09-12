@@ -27,7 +27,7 @@ public class HomeFragment extends BaseFragment {
         FragmentHomeBinding binding = DataBindingUtil.inflate(inflater,
                 R.layout.fragment_home, container, false);
 
-        HomeViewModel viewModel = new HomeViewModel(getActivity());
+        HomeViewModel viewModel = new HomeViewModel(getActivity(), binding.recyclerView);
         binding.setVm(viewModel);
 
         return binding.getRoot();
