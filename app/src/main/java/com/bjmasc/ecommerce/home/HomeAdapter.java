@@ -17,6 +17,7 @@ public class HomeAdapter extends DataBindingRecyclerViewAdapter {
         mViewModelMap = new HashMap<>();
         mViewModelMap.put(BannerItemViewModel.class, R.layout.banner_item);
         mViewModelMap.put(JustArrivedItemViewModel.class, R.layout.just_arrived_item);
+        mViewModelMap.put(MostPopViewItemViewModel.class, R.layout.most_popular_viewed_item);
     }
 
     @Override

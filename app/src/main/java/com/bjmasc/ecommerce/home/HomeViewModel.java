@@ -49,6 +49,7 @@ public class HomeViewModel extends BaseViewModel {
 
                 viewModels.add(new BannerItemViewModel(mActivity, response.getBanners()));
                 viewModels.add(new JustArrivedItemViewModel(mActivity, response.getJust_arrived()));
+                viewModels.add(new MostPopViewItemViewModel(mActivity, response.getMost_popular_viewed()));
 
                 adapter.addViewModels(viewModels);
             }
