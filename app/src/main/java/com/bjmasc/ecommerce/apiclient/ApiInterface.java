@@ -7,6 +7,7 @@ import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiInterface {
@@ -16,7 +17,7 @@ public interface ApiInterface {
     @POST(BASE_URL + "get_home_content")
     Call<HomeResponse> home(@Body JsonObject postParams);
 
-    @POST(BASE_URL + "get_categories")
-    Call<CategoriesResponse> categories(@Body JsonObject postParams);
+    @GET(BASE_URL + "get_categories")
+    Call<CategoriesResponse> categories();
 
 }
