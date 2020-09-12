@@ -17,8 +17,11 @@ public class CategoriesActivity extends BaseActivity {
         ActivityCategoriesBinding binding = DataBindingUtil.setContentView(this,
                 R.layout.activity_categories);
 
-        CategoriesViewModel viewModel = new CategoriesViewModel(this);
+        CategoriesViewModel viewModel = new CategoriesViewModel(this, binding.expandableListView);
         binding.setVm(viewModel);
+
+        binding.toolbar.setNavigationIcon(R.drawable.ic_close);
+        binding.toolbar.setNavigationOnClickListener(view1 -> finish());
     }
 
     @Override
